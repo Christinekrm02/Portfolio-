@@ -1,0 +1,102 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: thistle;
+
+}
+
+li,a,button {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    color: rgb(258,258,258);
+    text-decoration: none;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+    flex-wrap: wrap;
+    padding: 15px;
+}
+
+
+.cta {
+    cursor: pointer;
+    margin-right: auto;
+}
+
+.nav-links{
+    list-style: none;
+
+}
+
+.nav-links li{
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.nav-links li a{
+    transition: all 0.3s ease 0s;
+}
+
+.nav-links li a:hover {
+    color: #0088a9;
+}
+
+.hamburger{
+    background-color: transparent;
+    color: rgb(258,258,258);
+    border: 0;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+}
+
+.hamburger:focus{
+    outline: none;
+
+}
+
+button{
+    padding: 9px 25px;
+    background-color: rgba(0, 136, 169,1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+button:hover{
+    background-color: rgba(0, 136, 169,0.8);
+}
+
+@media screen and (max-width: 767px){
+    .nav-links{
+        display: none;
+        /*flex-direction: column; */
+        width: 100%;
+    }
+    .nav-links.show{
+        display: flex;
+    }
+    .hamburger{
+        display: block;
+    }
+    .btn{
+        width: 100%;
+    }
+    .logo{
+        width: 80px;
+    }
+    .nav-links li a{
+        padding: 2px;
+    }
+
+    header{
+        padding-bottom: 0;
+    }
+}
